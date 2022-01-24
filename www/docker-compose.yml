@@ -1,0 +1,14 @@
+version: '3'
+services:
+    wwww:
+        build: .
+        restart: always
+        ports:
+            - '80000:80'
+        volumes:
+            - ./wwww:/var/wwww/html
+        networks:
+            - default
+            
+volumes:
+    db_data:
